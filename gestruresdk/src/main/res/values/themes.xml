@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppGestrureTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#FF000000</item>
+        <item name="colorPrimaryDark">#FF000000</item>
+        <item name="colorAccent">#FF2196F3</item>
+        <item name="colorControlNormal">#FF2196F3</item>
+        <item name="colorControlActivated">#FF2196F3</item>
+        <item name="patternViewStyle">@style/PatternView</item>
+    </style>
+</resources>

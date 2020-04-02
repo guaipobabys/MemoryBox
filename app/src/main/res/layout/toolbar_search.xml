@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?actionBarSize"
+    app:contentInsetStart="0dp"
+    app:layout_collapseMode="pin">
+
+    <com.pobaby.common.libs.baseview.XTextView
+        android:id="@+id/toolbar_title"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="这里是标题"
+        android:textColor="#000000"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_searchbar_bg">
+
+            <com.pobaby.common.libs.baseview.XEditText
+                android:id="@+id/mXetSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/mIvSearch"
+                android:background="@null"
+                android:hint="请输入关键词"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textColor="@color/colorLabel"
+                android:textSize="14sp" />
+
+
+            <ImageView
+                android:id="@+id/mIvSearch"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/ic_search" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>

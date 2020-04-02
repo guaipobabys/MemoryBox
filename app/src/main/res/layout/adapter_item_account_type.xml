@@ -1,0 +1,91 @@
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/mLlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:layout_width="18dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorLabel"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.pobaby.common.libs.baseview.XTextView
+                android:id="@+id/mXtvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="系统"
+                android:textColor="@color/colorLabel"
+                android:textSize="16sp" />
+
+            <com.pobaby.common.libs.baseview.XTextView
+                android:id="@+id/mXtvRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="专门管理公司系统帐号划分的类型"
+                android:textColor="@color/colorLabel"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_drag" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/mIvEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="17dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_edit" />
+
+        <ImageView
+            android:id="@+id/mIvDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="17dp"
+            android:layout_toRightOf="@+id/mIvEdit"
+            android:padding="5dp"
+            android:src="@mipmap/ic_delete_red" />
+
+    </RelativeLayout>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+

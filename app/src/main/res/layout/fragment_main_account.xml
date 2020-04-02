@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <HorizontalScrollView
+        android:id="@+id/mHsvType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor">
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/mPstsAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginBottom="3dp"
+            app:pstsDividerColor="@color/colorSubtitle"
+            app:pstsIndicatorColor="@color/colorLabel"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsIndicatorMarginLeftRight="10dp"
+            app:pstsShouldExpand="true"
+            app:pstsTabTextColor="@color/colorLabel"
+            app:pstsTabTextSize="16sp"
+            app:pstsUnderlineColor="@color/colorSubtitle" />
+    </HorizontalScrollView>
+
+    <com.pobaby.common.libs.view.XViewPager
+        android:id="@+id/mXvpAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mPnvMain"
+        android:layout_below="@+id/mHsvType"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>

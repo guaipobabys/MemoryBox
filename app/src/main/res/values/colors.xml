@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 状态栏（标题）颜色 -->
+    <color name="colorPrimary">#FF000000</color>
+    <color name="colorPrimaryBlack">#FF000000</color>
+    <color name="colorPrimaryPink">#FFFB7299</color>
+    <color name="colorPrimaryRed">#fff44336</color>
+    <color name="colorPrimaryYellow">#FFFF7C62</color>
+    <color name="colorPrimaryBlue">#FF2196F3</color>
+    <color name="colorPrimaryPurple">#FF8BC34A</color>
+    <color name="colorPrimaryWhite">#FFFFFFFF</color>
+
+    <!-- ActionBar颜色 -->
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorPrimaryDarkBlack">#FF000000</color>
+    <color name="colorPrimaryDarkPink">#FFBC5573</color>
+    <color name="colorPrimaryDarkRed">#FFB73228</color>
+    <color name="colorPrimaryDarkYellow">#FFFF7C62</color>
+    <color name="colorPrimaryDarkBlue">#FF1970B6</color>
+    <color name="colorPrimaryDarkPurple">#FF689237</color>
+    <color name="colorPrimaryDarkWhite">#FFFFFFFF</color>
+
+    <!-- 获取焦点颜色 -->
+    <color name="colorAccent">#51B4D5</color>
+    <color name="colorAccentBlack">#FF000000</color>
+    <color name="colorAccentPink">#FFFB7299</color>
+    <color name="colorAccentRed">#fff44336</color>
+    <color name="colorAccentYellow">#FFFF7C62</color>
+    <color name="colorAccentBlue">#FF2196F3</color>
+    <color name="colorAccentPurple">#FF8BC34A</color>
+    <color name="colorAccentWhite">#FF3B3B3B</color>
+
+    <!--标题文字颜色-->
+    <color name="colorTitle">#FF333333</color>
+    <!--正文文字颜色-->
+    <color name="colorContent">#E1E9E3</color>
+    <!--描述文字颜色-->
+    <color name="colorLabel">#51B4D5</color>
+    <!--描述文字颜色-->
+    <color name="colorSubtitle">#FF999999</color>
+    <color name="backgroundColor">#2251B4D5</color>
+</resources>

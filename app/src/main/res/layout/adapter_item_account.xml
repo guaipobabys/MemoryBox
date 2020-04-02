@@ -1,0 +1,163 @@
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/mLlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp">
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorLabel"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.pobaby.common.libs.baseview.XTextView
+                    android:id="@+id/mXtvTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="【管理系统】"
+                    android:textColor="@color/colorLabel"
+                    android:textSize="12sp" />
+
+
+                <com.pobaby.common.libs.baseview.XTextView
+                    android:id="@+id/mXtvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:text="阿里云-清华e同学后台"
+                    android:textColor="@color/colorLabel"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@mipmap/ic_eye_open" />
+
+                <com.pobaby.common.libs.baseview.XTextView
+                    android:id="@+id/mXtvViewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:text="99"
+                    android:textColor="@color/colorLabel"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mIvCheck"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/ic_security" />
+
+                <com.pobaby.common.libs.baseview.XTextView
+                    android:id="@+id/mXtvAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="http://iemba.i.meetmesns.com"
+                    android:textColor="@color/colorLabel"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <com.pobaby.common.libs.baseview.XTextView
+                android:id="@+id/mXtvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="http://iemba.i.meetmesns.com"
+                android:textColor="@color/colorLabel"
+                android:textSize="12sp" />
+
+            <com.pobaby.common.libs.baseview.XTextView
+                android:id="@+id/mXtvRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="http://iemba.i.meetmesns.com"
+                android:textColor="@color/colorLabel"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/mIvCope"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/mIvEdit"
+            android:padding="5dp"
+            android:src="@mipmap/ic_cope" />
+
+        <ImageView
+            android:id="@+id/mIvEdit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_edit" />
+
+        <ImageView
+            android:id="@+id/mIvDelete"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/mIvEdit"
+            android:padding="5dp"
+            android:src="@mipmap/ic_delete_red" />
+
+    </RelativeLayout>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

@@ -1,0 +1,110 @@
+apply plugin: 'com.android.application'
+// 在 Moudle:app的  build.gradle 文件中添加:
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        applicationId rootProject.ext.android.applicationId
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+greendao {
+    schemaVersion 6 //数据库版本号
+    daoPackage 'com.pobaby.memorybox.db'
+    // 设置DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    generateTests false //设置为true以自动生成单元测试。
+    targetGenDirTests 'src/main/java' //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // androidx
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // 手势
+    implementation project(path: ':gestruresdk')
+    // 指纹
+    implementation project(path: ':fingersdk')
+    // rxjava+retrofit+okhttp3 网络框架 https://github.com/square/retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    // https://github.com/ReactiveX/RxJava
+    implementation "io.reactivex.rxjava2:rxjava:2.2.13"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
+    // https://github.com/JakeWharton/butterknife
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    // EventBus https://github.com/greenrobot/EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    // 日志打印
+    implementation 'com.orhanobut:logger:2.1.1'
+    // 状态栏透明的api SystemBarTint https://github.com/jgilfelt/SystemBarTint
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    //tab
+    implementation 'cc.tracyzhang:PagerSlidingTabStrip:1.1.1'
+    // 底部菜单栏
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.3.0X'
+    // 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+    // https://github.com/scwang90/SmartRefreshLayout/tree/master#%E7%AE%80%E5%8D%95%E7%94%A8%E4%BE%8B
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'      //核心必须依赖
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'    //经典刷新头
+    implementation 'com.scwang.smart:refresh-header-radar:2.0.0-alpha-1'       //雷达刷新头
+    implementation 'com.scwang.smart:refresh-header-falsify:2.0.0-alpha-1'     //虚拟刷新头
+    implementation 'com.scwang.smart:refresh-header-material:2.0.0-alpha-1'    //谷歌刷新头
+    implementation 'com.scwang.smart:refresh-header-two-level:2.0.0-alpha-1'   //二级刷新头
+    implementation 'com.scwang.smart:refresh-footer-ball:2.0.0-alpha-1'        //球脉冲加载
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'    //经典加载
+    // widget https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    // doc:https://www.jianshu.com/p/b343fcff51b0
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    // https://github.com/greenrobot/greenDAO
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    // SwipeMenuRecyclerView
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation 'com.google.android.material:material:1.0.0'
+    //侧滑删除
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    // AndroidPicker 包括WheelPicker、ColorPicker、FilePicker、MultiplePicker，
+    // WheelPicker包括DatePicker、TimePicker、OptionPicker、LinkagePicker、AddressPicker、NumberPicker、DoublePicker等
+    implementation('com.github.gzu-liyujiang.AndroidPicker:WheelPicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
+    implementation('com.github.gzu-liyujiang.AndroidPicker:FilePicker:1.5.5') {
+        exclude group: 'com.android.support'
+    }
+    // 快速创建对话框的工具类库  https://github.com/yilylong/CBDialog
+    implementation 'com.github.yilylong:CBDialog:v1.0.6'
+
+}
