@@ -2,16 +2,21 @@
 apply from: "config.gradle"
 buildscript {
     repositories {
-        // 配置的方法就是在根build.gradle中添加镜像仓库，一般我们选择阿里的 http://maven.aliyun.com/nexus/content/groups/public/
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        google() { url 'https://maven.aliyun.com/repository/google' }
-        jcenter() { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+        google()
+        mavenCentral()
         
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
         // greendao
-        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // add plugin
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0' // add plugin
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -19,11 +24,14 @@ buildscript {
 
 allprojects {
     repositories {
-        // 配置的方法就是在根build.gradle中添加镜像仓库，一般我们选择阿里的 http://maven.aliyun.com/nexus/content/groups/public/
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-        maven { url "https://jitpack.io" }
-        google() { url 'https://maven.aliyun.com/repository/google' }
-        jcenter() { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
     }
 }
 

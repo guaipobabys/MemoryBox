@@ -105,6 +105,6 @@ dependencies {
         exclude group: 'com.android.support'
     }
     // 快速创建对话框的工具类库  https://github.com/yilylong/CBDialog
-    implementation 'com.github.yilylong:CBDialog:v1.0.6'
+    implementation 'com.github.yilylong:CBDialog:1.1.1'
 
 }
